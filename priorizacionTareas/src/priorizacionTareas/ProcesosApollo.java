@@ -23,6 +23,14 @@ public class ProcesosApollo {
             System.out.println("[STATUS] - NOMINAL. Carga del sistema: " + cargaTotal + "%");
         }
     }
+    
+    public void mostrarTareasEnCola() {
+        if (tareasActivas.isEmpty()) {
+            System.out.println("No hay tareas pendientes.");
+        } else {
+            tareasActivas.forEach(System.out::println);
+        }
+    }
 
     private void ejecutarFiltroHamilton(int cargaActual) {
         // Formato NASA para el log de consola
